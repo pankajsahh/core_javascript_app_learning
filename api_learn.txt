@@ -1,0 +1,24 @@
+featch working?????
+
+const endpoint = "http//www.youtube.com"
+const params = {
+    'seed_artist'='lkdfa34234l2342k423k243',
+    'target_dancebility'='0.9
+};
+
+const token = 'kj23h423h4kj23h4kj234213k4kl32hkj34kjh'
+
+featch(`${endpoint}?${qs.stringify(params)}`,{
+    method:'GET',
+    header:{
+        Authorization:`Token ${token}`
+    }
+})
+.then(response=>{
+    response.json()
+})
+.then(({tracks}))=>{
+    tracks.forEach(item=>{
+        console.log(`${item.name} by ${item.artist[0].name}`);
+    })
+}
