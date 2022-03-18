@@ -72,12 +72,15 @@ img {
   width: 85px;
   margin: 2px;
   padding: 0;
+  position: relative;
 }
 .fav_meal ul li span{
   font-weight: 1000;
   font-size: 0.9rem;
+  
   margin: 0;
   padding: 0;
+  
   
 }
 .meals{
@@ -122,4 +125,21 @@ img {
 }
 .meal_body button.active{
   color: rgb(167, 20, 235);
+}
+
+.rm_btn{
+  position: absolute;
+  top:0;
+  right: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 9px;
+  border: 1px solid red;
+  display: inline-block;
+  border-radius: 100%;
+  padding: 3px;
+  opacity: 0;
+}
+.fav_meal ul li:hover .rm_btn{
+  opacity: 1;
 }
